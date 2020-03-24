@@ -1,21 +1,40 @@
-# ipl-dashboard
+A Dashboard to visualize Indian Premier League data from season 2008-2016.
 
-> project for Atlan
 
-## Build Setup
 
-``` bash
-# install dependencies
-npm install
+Libraries Used
+Framework: Vue.js 2.0
+Routing: Vue-router
+Charts: D3.js V4
+Bonus Points
+**Create web-app in Vue.js: Complete**
 
-# serve with hot reload at localhost:8080
-npm run dev
+Vue.js borrows heavily from Angular and React syntax, so was easy to pick up.
+Chose Vue over React because of smaller library size and performance.
+Didn't use angular 2/4 because it is too big in size and overly complex.
+Wanted to use Preact, but chose Vue due to better Vue-router, Preact-Router doesn't easily work with hashHistory.
 
-# build for production with minification
-npm run build
+**Optimize Loading Time: Complete**
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
+All Javascript and CSS is minified.
+Runtime-only build of Vue is used, which is 6Kb lighter and also has performance benefits.
+Webpack is used to split Vendor and App bundle.
+Preload is used to load Vendor and App bundle.
+Home Route has Static Content (Kind of cheating to get a lower First Paint Time).
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+**Mobile Responsive: Complete**
+
+Responsive breakpoints used to make the web-app mobile responsive.
+Responsive dimensions of D3 charts set dynamically.
+Redrawing of D3 charts on window resize event(550ms debounced).
+
+**Progressive Web App: Complete**
+
+sw-precache to provide a service worker for the web-app to cache app shell.
+manifest file to display install banners and splash screen.
+LightHouse Score of 90+/100
+
+**Offline Usage:Not Complete(some errors)**
+
+Offline caching of static assets using service-worker.
+Cache-First strategy used to fetch dynamic GET requests using service-worker.
