@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IPL Dashboard</title>
+    <!--[if IE]><link rel="shortcut icon" href="static/img/icons/favicon.ico"><![endif]-->
+    
+    <link rel="manifest" href="static/manifest.json">
+    <meta name="theme-color" content="#3f51b5">
+
+    <!-- Add to home screen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Awesome-IPL">
+    <link rel="apple-touch-icon" href="static/img/icons/icon-152x152.png">
+    <!-- Add to home screen for Windows -->
+    <meta name="msapplication-TileImage" content="static/img/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#fff">
+    
+    <link rel="preload" href="static/js/vendor.be5d8de533c8e575ef6d.js" as="script">
+    <link rel="preload" href="static/js/app.c0f5456beb40dd45df25.js" as="script">
+    <link rel="preload" href="static/css/app.7b06c7a2cf3f44c9d8f90aeb21e5a607.css" as="style">
+    <link rel="preload" href="static/js/manifest.0ddb5295e9188692f6c8.js" as="script">
+  <link href="static/css/app.7b06c7a2cf3f44c9d8f90aeb21e5a607.css" rel="stylesheet"></head>
+  <body>
+    <noscript>
+      oops! I think scripts are disabled or failed to download.
+    </noscript>
+    <div id="app"></div>
+    <!-- Todo: only include in production -->
+    <script>(function() {
+  'use strict';
+
+  const isLocalhost = Boolean(window.location.hostname === 'localhost' ||
+      window.location.hostname === '[::1]' ||
+      window.location.hostname.match(
+        /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
+      )
+    );
+
+  window.addEventListener('load', function() {
+      if ('serviceWorker' in navigator &&
+          (window.location.protocol === 'https:' || isLocalhost)) {
+        navigator.serviceWorker.register('service-worker.js')
+        .then(function(registration) {
+          registration.onupdatefound = function() {
+            if (navigator.serviceWorker.controller) {
+              const installingWorker = registration.installing;
+
+              installingWorker.onstatechange = function() {
+                switch (installingWorker.state) {
+                  case 'installed':
+                    break;
+
+                  case 'redundant':
+                    throw new Error('The installing ' +
+                                    'service worker became redundant.');
+
+                  default:
+                }
+              };
+            }
+          };
+        }).catch(function(e) {
+          console.error('Error during service worker registration:', e);
+        });
+      }
+  });
+})();
+</script>
+    <!-- built files will be auto injected -->
+  <script type="text/javascript" src="static/js/manifest.0ddb5295e9188692f6c8.js"></script><script type="text/javascript" src="static/js/vendor.be5d8de533c8e575ef6d.js"></script><script type="text/javascript" src="static/js/app.c0f5456beb40dd45df25.js"></script></body>
+</html>
