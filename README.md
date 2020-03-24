@@ -7,6 +7,7 @@ Framework: Vue.js 2.0
 Routing: Vue-router
 Charts: D3.js V4
 Bonus Points
+
 **Create web-app in Vue.js: Complete**
 
 Vue.js borrows heavily from Angular and React syntax, so was easy to pick up.
